@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @book.category %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @book.number %>
+</p>
+
+
+<%= @book.users.each do |f| %>
+  <p><%= f.email %></p>
+<% end %>
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %>
